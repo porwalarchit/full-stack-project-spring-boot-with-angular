@@ -7,7 +7,7 @@ import java.io.Serializable;
 @Entity
 public class Employee implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, updatable = false)
     private long id;
     private String name;
@@ -65,7 +65,7 @@ public class Employee implements Serializable {
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
-    
+
     public String getEmployeeCode() {
         return employeeCode;
     }
